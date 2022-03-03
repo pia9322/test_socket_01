@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#chat_section #result {
+  overflow: auto;
+  max-width: 600px;
+  width: 100%;
+  height: 300px;
+  border: 1px solid #f00;
+}
+/*# sourceMappingURL=style.css.map */

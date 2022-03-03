@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "axios": "^0.26.0",
+    "color-hash": "^2.0.1",
+    "mongoose": "^6.2.4",
+    "multer": "^1.4.4",
+    "socket.io": "^1.7.4",
+    "socketio": "^1.0.0"
+  }
+}

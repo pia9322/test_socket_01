@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <section class="chat_section" id="chat_section">
+        <div id='result'></div>
+
+
+
+        <div class="msg_server_box">
+            <input type="text" class="text_box_server" id="text_box_server" placeholder="관리자">
+            <button id="send" onclick="msgSendserver('msg_server', '서버', text_box_server)">서버채팅보내기</button>
+        </div>
+
+
+        <div class="msg_user_box">
+            <input type="text" class="text_box_user" id="text_box_user" placeholder="유저">
+            <button id="send" onclick="msgSendserver('msg_usr', '유저', text_box_user)">유저채팅보내기</button>
+        </div>
+
+        <div class="msg_close">
+            <button onclick="disconnect()">나가기</button>
+        </div>
+
+
+
+        <script>
+            let socket = new WebSocket("ws://localhost:8081"),
+                result = document.querySelector('#result'),
+                text_box_server = document.querySelector('#text_box_server'),
+                text_box_user = document.querySelector('#text_box_user')
+
+
+                
+            socket.onopen = function() {
+                console.log('서버와 웹소켓 연결 성공!');
+            };
+
+            function disconnect() {
+                socket.close();
+            }
+
+
+
+            // function msgSendserver() {
+            //     result.innerHTML += "<p class='msg_server'> 서버 : " + text_box_server.value + "</p>";
+            //     socket.send(result.innerText);
+            // }
+            function msgSendserver(type, type_01, type_02) {
+
+                result.innerHTML += "<p class='" + type + "'> "+ type_01 + " : " + type_02.value + "</p>";
+                socket.send(result.innerText);
+
+            }
+
+            
+
+
+            socket.onmessage = function(event) {
+                console.log(event.data);
+                // socket.send('클라 > 서버');
+            };
+        </script>
+    </section>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #result {
+            overflow: auto;
+            max-width: 600px;
+            width: 100%;
+            height: 300px;
+            border: 1px solid #f00;
+        }
+
+        #result .msg_usr {
+            text-align: right;
+        }
+
+        #result .msg_server {
+            text-align: left;
+        }
+    </style>
+</body>
+
+</html>
