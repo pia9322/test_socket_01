@@ -8,6 +8,7 @@
 #chat_section {
   max-width: 600px;
   margin: 20px auto 0;
+  padding: 2.5% 5% 0
 }
 
 #chat_section .result_wrap #result {
@@ -20,12 +21,12 @@
   padding: 10px;
 }
 
-#chat_section .msg_box_wrap {
-  margin-top: 20px;
+#chat_section .result_wrap #result .msg_usr {
+  text-align: right;
 }
 
-#chat_section .msg_box_wrap .msg_box.msg_user_box {
-  text-align: right;
+#chat_section .msg_box_wrap {
+  margin-top: 20px;
 }
 
 #chat_section .msg_box_wrap .msg_box input {
