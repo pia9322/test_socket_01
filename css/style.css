@@ -8,7 +8,7 @@
 #chat_section {
   max-width: 600px;
   margin: 20px auto 0;
-  padding: 2.5% 5% 0
+  padding: 2.5% 10% 0;
 }
 
 #chat_section .result_wrap #result {
@@ -26,20 +26,27 @@
 }
 
 #chat_section .msg_box_wrap {
-  margin-top: 20px;
+  padding-top: 20px;
+  border: 1px solid #999;
+  border-top: none;
+}
+
+#chat_section .msg_box_wrap .msg_box {
+  text-align: right;
+  margin: 10px 0 0;
 }
 
 #chat_section .msg_box_wrap .msg_box input {
-  width: calc(80% - 10px);
-  height: 30px;
+  width: calc(60% - 10px);
+  height: 20px;
   margin-right: 10px;
   border: none;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #dddddd;
 }
 
 #chat_section .msg_box_wrap .msg_box button {
   width: calc(20% - 10px);
-  height: 30px;
+  height: 20px;
   background-color: none;
   border: none;
   border-radius: 10px;
