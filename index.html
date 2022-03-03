@@ -21,13 +21,13 @@
         <div class="msg_box_wrap">
             <div class="msg_box msg_server_box">
                 <input type="text" class="text_box_server" id="text_box_server" placeholder="관리자 메세지 란입니다">
-                <button id="send" onclick="msgSendserver('msg_server', '서버', text_box_server)">서버</button>
+                <button id="send" onclick="msgSendserver('msg_server', '서버', text_box_server)">보내기</button>
             </div>
 
 
             <div class="msg_box msg_user_box">
                 <input type="text" class="text_box_user" id="text_box_user" placeholder="유저메세지란 입니다">
-                <button id="send" onclick="msgSendserver('msg_usr', '유저', text_box_user)">유저</button>
+                <button id="send" onclick="msgSendserver('msg_usr', '유저', text_box_user)">보내기</button>
             </div>
 
 
@@ -114,7 +114,7 @@
 }
 
 #chat_section .msg_box_wrap .msg_box {
-  text-align: right;
+  text-align: center;
   margin: 10px 0 0;
 }
 
