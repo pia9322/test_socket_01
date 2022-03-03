@@ -2,14 +2,14 @@ const express = require('express');
 const app = express();
 
 const WebSocket = require('ws');
-const socket = new WebSocket.Server({port: 8081});
+const socket = new WebSocket.Server({port: 80});
 
 
 app.use("/", function (req, res) {
   res.sendFile(__dirname + '/index.html');
 });
 
-app.listen(8080);
+app.listen(80);
 
 socket.on('connection', (ws, req) => {
   
