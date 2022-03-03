@@ -6,6 +6,8 @@
 
 #chat_section .msg_box_wrap { margin-top: 20px; }
 
+#chat_section .msg_box_wrap .msg_box.msg_user_box { text-align: right; }
+
 #chat_section .msg_box_wrap .msg_box input { width: calc(80% - 10px); height: 30px; margin-right: 10px; border: none; border-bottom: 1px solid #ddd; }
 
 #chat_section .msg_box_wrap .msg_box button { width: calc(20% - 10px); height: 30px; background-color: none; border: none; border-radius: 10px; }

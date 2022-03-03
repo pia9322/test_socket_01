@@ -20,6 +20,9 @@
     .msg_box_wrap {
         margin-top: 20px;
         .msg_box {
+            &.msg_user_box {
+                text-align: right;
+            }
             input {
                 width: calc(80% - 10px); height: 30px;
                 margin-right: 10px;
